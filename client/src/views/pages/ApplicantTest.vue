@@ -1,65 +1,37 @@
 <template>
-  <div class="d-flex align-items-center min-vh-100">
-    <CContainer fluid>
-      <CRow class="justify-content-center">
-        <CCol md="6">
-          <CCard class="mx-4 mb-0">
-            <CCardBody class="p-4">
-              <CForm>
-                <h1>Applicant Test</h1>
-                <p class="text-muted">Create your account</p>
-                <CInput
-                  placeholder="Username"
-                  autocomplete="username"
-                >
-                  <template #prepend-content><CIcon name="cil-user"/></template>
-                </CInput>
-                <CInput
-                  placeholder="Email"
-                  autocomplete="email"
-                  prepend="@"
-                />
-                <CInput
-                  placeholder="Password"
-                  type="password"
-                  autocomplete="new-password"
-                >
-                  <template #prepend-content><CIcon name="cil-lock-locked"/></template>
-                </CInput>
-                <CInput
-                  placeholder="Repeat password"
-                  type="password"
-                  autocomplete="new-password"
-                  class="mb-4"
-                >
-                  <template #prepend-content><CIcon name="cil-lock-locked"/></template>
-                </CInput>
-                <CButton color="success" block>Create Account</CButton>
-              </CForm>
-            </CCardBody>
-            <CCardFooter class="p-4">
-              <CRow>
-                <CCol col="6">
-                  <CButton block color="facebook">
-                    Facebook
-                  </CButton>
-                </CCol>
-                <CCol col="6">
-                  <CButton block color="twitter">
-                    Twitter
-                  </CButton>
-                </CCol>
-              </CRow>
-            </CCardFooter>
-          </CCard>
-        </CCol>
-      </CRow>
-    </CContainer>
+  <div>
+    <div>
+      <h3>Banned</h3>
+      <div>
+        <CButton block color="info">Canada</CButton>
+        <CButton block color="info">Germany</CButton>
+      </div>
+      <span>Select Banned Countries</span>
+    </div>
+
+    <div>
+      <CTabs variant="pills" :active-tab="1">
+        <CTab title="Home">
+          1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </CTab>
+        <CTab title="Profile">
+          2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </CTab>
+      </CTabs>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Register'
+  name: 'ApplicantTest'
 }
 </script>
