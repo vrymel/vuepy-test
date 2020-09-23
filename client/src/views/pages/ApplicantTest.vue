@@ -11,6 +11,9 @@
             class="mr-2"
             color="info">
           {{ country.name }}
+          <span @click="removeCountry(country)">
+            <CIcon name="cilXCircle" class="ml-3"/>
+          </span>
         </CButton>
       </div>
     </div>
@@ -23,6 +26,7 @@
               v-for="country in countryList"
               :key="country.code"
               :label="country.name"
+              :checked="selectedCountriesMap[country.code]"
               @update:checked="addCountry(country, $event)"/>
           <CInputCheckbox label="Philippines" @update:checked="addCountry('Philippines', $event)"/>
         </CTab>
@@ -37,21 +41,26 @@ import countriesJson from './countries.json';
 
 export default {
   name: 'ApplicantTest',
-  mounted() {
-    console.log(countriesjson);
-  },
   data() {
     return {
       selectedCountries: [],
+      selectedCountriesMap: {},
       countryList: countriesJson
     }
   },
   methods: {
     addCountry(country, checked) {
-      if (checked)
+      if (checked) {
         this.selectedCountries.push(country);
-      else
+        this.selectedCountriesMap[country.code] = true;
+      } else {
         this.selectedCountries = this.selectedCountries.filter((c) => c !== country)
+        delete this.selectedCountriesMap[country.code];
+      }
+    },
+    removeCountry(country) {
+      this.selectedCountries = this.selectedCountries.filter((c) => c !== country)
+      delete this.selectedCountriesMap[country.code];
     }
   }
 }
