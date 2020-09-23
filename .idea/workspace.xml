@@ -83,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600867845513</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added state and event handler">
+      <created>1600868583858</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600868583858</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,17 +101,18 @@
     <MESSAGE value="Initial commit - fresh Core UI Vue project" />
     <MESSAGE value="Added Applicant Test page" />
     <MESSAGE value="Added mock Tabs and selected country buttons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mock Tabs and selected country buttons" />
+    <MESSAGE value="Added state and event handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added state and event handler" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1044" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600866984743">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1044" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600866984743" />
-    <state x="911" y="121" key="CommitChangelistDialog2" timestamp="1600867845310">
+    <state x="911" y="121" key="CommitChangelistDialog2" timestamp="1600868583681">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="911" y="121" key="CommitChangelistDialog2/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600867845310" />
+    <state x="911" y="121" key="CommitChangelistDialog2/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600868583681" />
     <state width="1227" height="311" key="GridCell.Tab.0.bottom" timestamp="1600867942692">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

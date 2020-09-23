@@ -15,17 +15,10 @@
     </div>
 
     <div>
-      <CTabs variant="pills" :active-tab="1">
+      <CTabs variant="pills" :active-tab="0">
         <CTab title="ABC">
-          <CButton block color="info" @click="addCountry('Germany')">Germany</CButton>
-          <CButton block color="info" @click="addCountry('Philippines')">Philippines</CButton>
-        </CTab>
-        <CTab title="DEF">
-          2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
+          <CInputCheckbox label="Germany" @update:checked="addCountry('Germany', $event)" />
+          <CInputCheckbox label="Philippines" @update:checked="addCountry('Philippines', $event)" />
         </CTab>
       </CTabs>
     </div>
@@ -41,8 +34,11 @@ export default {
     }
   },
   methods: {
-    addCountry(country) {
-      this.selectedCountries.push(country);
+    addCountry(country, checked) {
+      if (checked)
+        this.selectedCountries.push(country);
+      else
+        this.selectedCountries = this.selectedCountries.filter((c) => c !== country)
     }
   }
 }
