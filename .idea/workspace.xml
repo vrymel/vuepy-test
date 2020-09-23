@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2163cde1-6d49-4347-881a-7fdace8152c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -97,11 +106,29 @@
       <option name="project" value="LOCAL" />
       <updated>1600868948689</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added spacers">
+      <created>1600869357102</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600869357102</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -110,17 +137,22 @@
     <MESSAGE value="Added mock Tabs and selected country buttons" />
     <MESSAGE value="Added state and event handler" />
     <MESSAGE value="Replaced country buttons with checkbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replaced country buttons with checkbox" />
+    <MESSAGE value="Added spacers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spacers" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1044" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600866984743">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1044" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600866984743" />
-    <state x="911" y="121" key="CommitChangelistDialog2" timestamp="1600868948496">
+    <state x="911" y="121" key="CommitChangelistDialog2" timestamp="1600869356888">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="911" y="121" key="CommitChangelistDialog2/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600868948496" />
+    <state x="911" y="121" key="CommitChangelistDialog2/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600869356888" />
+    <state x="89" y="9" width="1822" height="1062" maximized="true" key="DiffContextDialog" timestamp="1600869411274">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="89" y="9" width="1822" height="1062" maximized="true" key="DiffContextDialog/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600869411274" />
     <state width="1227" height="311" key="GridCell.Tab.0.bottom" timestamp="1600867942692">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -145,9 +177,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1012" y="295" width="588" height="490" key="find.popup/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600867685887" />
-    <state x="969" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600867691735">
+    <state x="969" y="239" width="672" height="678" key="search.everywhere.popup" timestamp="1600869508162">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="969" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600867691735" />
+    <state x="969" y="239" width="672" height="678" key="search.everywhere.popup/1920.0.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1600869508162" />
   </component>
 </project>
