@@ -52,6 +52,7 @@ const Page404 = () => import('@/views/pages/Page404')
 const Page500 = () => import('@/views/pages/Page500')
 const Login = () => import('@/views/pages/Login')
 const Register = () => import('@/views/pages/Register')
+const ApplicantTest = () => import('@/views/pages/ApplicantTest')
 
 // Users
 const Users = () => import('@/views/users/Users')
@@ -334,6 +335,11 @@ function configRoutes () {
           path: 'register',
           name: 'Register',
           component: Register
+        },
+        {
+          path: 'applicant-test',
+          name: 'ApplicantTest',
+          component: ApplicantTest
         }
       ]
     }
