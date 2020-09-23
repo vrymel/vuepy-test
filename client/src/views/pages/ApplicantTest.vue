@@ -1,28 +1,30 @@
 <template>
-  <div>
+  <CContainer>
+    <h2>Banned Countries</h2>
+
     <div>
-      <h3>Banned</h3>
-      <div>
+      <p>Banned</p>
+      <div class="d-flex">
         <CButton
             v-for="country in selectedCountries"
             :key="country"
-            block
+            class="mr-2"
             color="info">
           {{ country }}
         </CButton>
       </div>
-      <span>Select Banned Countries</span>
     </div>
 
-    <div>
+    <div class="mt-5">
+      <p>Select Banned Countries</p>
       <CTabs variant="pills" :active-tab="0">
         <CTab title="ABC">
-          <CInputCheckbox label="Germany" @update:checked="addCountry('Germany', $event)" />
-          <CInputCheckbox label="Philippines" @update:checked="addCountry('Philippines', $event)" />
+          <CInputCheckbox label="Germany" @update:checked="addCountry('Germany', $event)"/>
+          <CInputCheckbox label="Philippines" @update:checked="addCountry('Philippines', $event)"/>
         </CTab>
       </CTabs>
     </div>
-  </div>
+  </CContainer>
 </template>
 
 <script>
