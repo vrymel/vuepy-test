@@ -12,6 +12,15 @@ def index():
 
     return {'hello': 'world'}
 
+@app.route('/state/{storage_id}')
+def state(storage_id):
+    try:
+        stored = next(VuePy.query(storage_id))
+    except:
+        return {}
+
+    return json.loads(stored.countries)
+
 @app.route('/save', methods=['POST'])
 def save():
     data = app.current_request.json_body

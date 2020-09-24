@@ -53,8 +53,15 @@
 <script>
 import chunk from 'lodash/chunk';
 import axios from 'axios';
-// todo: move to backend
 import countriesJson from './countries.json';
+
+const localStorageKey = 'vuepy-id';
+let STORAGE_ID = localStorage.getItem(localStorageKey);
+
+if (!STORAGE_ID)
+  STORAGE_ID = Math.random().toString();
+
+localStorage.setItem(localStorageKey, STORAGE_ID);
 
 export default {
   name: 'ApplicantTest',
@@ -65,6 +72,21 @@ export default {
       countryList: countriesJson,
       selectedCountryGroup: {name: 'ABC', data: ['A', 'B', 'C']}
     }
+  },
+  mounted() {
+    const me = this;
+
+    axios.get(`/api/state/${STORAGE_ID}`)
+        .then((response) => {
+          me.selectedCountriesMap = response.data;
+
+          const preloadCountries = [];
+          for (let country of me.countryList) {
+            if (me.selectedCountriesMap[country.code])
+              preloadCountries.push(country);
+          }
+          me.selectedCountries = preloadCountries;
+        });
   },
   computed: {
     countriesByFirstLetters: function () {
@@ -122,7 +144,7 @@ export default {
       this.selectedCountryGroup = this.countriesByFirstLetters[selectedTabIndex];
     },
     saveCountries() {
-      axios.post('/api/save', {'name': 'vrymel'})
+      axios.post('/api/save', {'id': STORAGE_ID, 'countries': this.selectedCountriesMap})
           .then((response) => {
             console.log(response);
           });
