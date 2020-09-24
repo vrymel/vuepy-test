@@ -4,14 +4,6 @@ import json
 
 app = Chalice(app_name='backend')
 
-
-@app.route('/')
-def index():
-    vuepy = VuePy('test', countries='list of countries')
-    vuepy.save()
-
-    return {'hello': 'world'}
-
 @app.route('/state/{storage_id}')
 def state(storage_id):
     try:
