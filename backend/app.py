@@ -1,5 +1,6 @@
 from chalice import Chalice
 from chalicelib.VuePy import VuePy
+import json
 
 app = Chalice(app_name='backend')
 
@@ -10,6 +11,15 @@ def index():
     vuepy.save()
 
     return {'hello': 'world'}
+
+@app.route('/save', methods=['POST'])
+def save():
+    data = app.current_request.json_body
+
+    vuepy = VuePy('test', countries=json.dumps(data))
+    vuepy.save()
+
+    return {'success': 'true'}
 
 
 # The view function above will return {"hello": "world"}

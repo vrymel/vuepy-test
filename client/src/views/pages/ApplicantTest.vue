@@ -34,15 +34,25 @@
             :label="country.name"
             :checked="selectedCountriesMap[country.code]"
             @update:checked="addCountry(country, $event)">
-          {{country}}
+          {{ country }}
         </CInputCheckbox>
       </div>
+    </div>
+
+    <div class="mt-5 mb-5">
+      <CButton
+          @click="saveCountries()"
+          class="mr-2"
+          color="primary">
+        Save
+      </CButton>
     </div>
   </CContainer>
 </template>
 
 <script>
 import chunk from 'lodash/chunk';
+import axios from 'axios';
 // todo: move to backend
 import countriesJson from './countries.json';
 
@@ -53,7 +63,7 @@ export default {
       selectedCountries: [],
       selectedCountriesMap: {},
       countryList: countriesJson,
-      selectedCountryGroup: { name: 'ABC', data: ['A', 'B', 'C'] }
+      selectedCountryGroup: {name: 'ABC', data: ['A', 'B', 'C']}
     }
   },
   computed: {
@@ -81,7 +91,7 @@ export default {
         }
       })
     },
-    displayCountryList: function() {
+    displayCountryList: function () {
       const allowedFirstLetters = new Set(this.selectedCountryGroup.data);
       const displayCountries = [];
 
@@ -110,6 +120,12 @@ export default {
     },
     selectCountryGroup(selectedTabIndex) {
       this.selectedCountryGroup = this.countriesByFirstLetters[selectedTabIndex];
+    },
+    saveCountries() {
+      axios.post('/api/save', {'name': 'vrymel'})
+          .then((response) => {
+            console.log(response);
+          });
     }
   }
 }
