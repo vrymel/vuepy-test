@@ -4,11 +4,11 @@
 
     <div>
       <p>Banned</p>
-      <div class="d-flex">
+      <div class="d-flex flex-wrap">
         <CButton
             v-for="country in selectedCountries"
             :key="country.code"
-            class="mr-2"
+            class="mr-2 mb-1"
             color="info">
           {{ country.name }}
           <span @click="removeCountry(country)">
