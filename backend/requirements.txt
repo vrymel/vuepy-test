@@ -1,0 +1,2 @@
+chalice==1.20.0
+pynamodb==4.2.0
