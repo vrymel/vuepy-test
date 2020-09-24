@@ -19,6 +19,8 @@
     </div>
 
     <div class="mt-5">
+      <CInputCheckbox label="Select All" @update:checked="selectAll($event)" />
+
       <p>Select Banned Countries</p>
       <CTabs variant="pills" :active-tab="0" @update:activeTab="selectCountryGroup">
         <CTab v-for="groupedCountry in countriesByFirstLetters"
@@ -27,7 +29,7 @@
         </CTab>
       </CTabs>
 
-      <div>
+      <div class="mt-4">
         <CInputCheckbox
             v-for="country in displayCountryList"
             :key="country.code"
@@ -148,6 +150,20 @@ export default {
           .then((response) => {
             console.log(response);
           });
+    },
+    selectAll(checked) {
+      if (checked) {
+        this.selectedCountries = Array.from(this.countryList);
+        this.selectedCountriesMap = this.selectedCountries.reduce((accumulator, current) => {
+          console.log({current, accumulator});
+          accumulator[current.code] = true;
+
+          return accumulator;
+        }, {});
+      } else {
+        this.selectedCountriesMap = {};
+        this.selectedCountries = [];
+      }
     }
   }
 }
