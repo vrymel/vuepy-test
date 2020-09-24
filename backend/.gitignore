@@ -2,3 +2,4 @@
 .chalice/venv/
 .chalice/policy-dev.json
 .chalice/config.json
+.chalice/deployed/dev.json
