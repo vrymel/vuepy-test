@@ -16,7 +16,7 @@ def index():
 def save():
     data = app.current_request.json_body
 
-    vuepy = VuePy('test', countries=json.dumps(data))
+    vuepy = VuePy(data['id'], countries=json.dumps(data['countries']))
     vuepy.save()
 
     return {'success': 'true'}
